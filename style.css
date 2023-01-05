@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.tittle {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.tittle h2{
+    color: rgb(101, 110, 231);
+}
+
+nav {
+    padding: 30px 0;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li {
+    list-style: none;
+    width: 130px;
+    text-align: center;
+    background-color: #cfdefa;
+    font-size: 20px;
+    color: rgb(95, 91, 91);
+    padding: 8px 10px ;
+    margin: 0 5px;
+    border-radius: 3px;
+   cursor: pointer;
+   font-weight: 200;
+}
+
+.active {
+    background-color: rgb(107, 87, 236);
+    color: #fff;
+}
+
+.gallary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.gallary .imgbox{
+    width: 250px;
+    margin: 10px 10px;
+    display: block;
+   
+}
+
+.gallary .imgbox.Show{
+   width: 16%;
+   padding: 2px;
+   transition: all  1s ease;
+   /* display: block;
+   animation-name: zoom;
+   animation-duration: 1s ; */
+}
+
+
+.gallary .imgbox.hide{
+   width: 0;
+   padding: 0;
+   transition: all 1s ease;
+  /* display: none; */
+  
+
+
+}
+
+
+
+.gallary .imgbox img {
+    width: 100%;
+    object-fit: cover;
+    transition: .5s;
+    border-radius: 5px;
+
+}
+
+.gallary .imgbox img:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 10px 20px rgb(192, 201, 250);
+  
+}
+
+.preViewImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+   align-items: center;
+   justify-content: center;
+   display: none;
+
+}
+.preViewImg.showPreBox{
+    display: flex;
+   
+}
+
+
+
+.imgp {
+    width: 500px;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    position: relative;
+    animation-name: zoom;
+    animation-duration: 1s ;
+
+}
+
+.imgp span{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 30px;
+    color: rgb(110, 120, 250);
+    cursor: pointer;
+    
+}
+
+
+.imgPreview img{
+    width: 100%;
+    object-fit: cover;
+
+}
+.imgPreview {
+    margin-top: 61px;
+    margin-left: 3px;
+    width: 99%;
+}
+
+
+
+@keyframes zoom {
+
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
